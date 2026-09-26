@@ -1,0 +1,18 @@
+name: Build Bawm shoop APK
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: Bawm-shoop-APK
+          path: app-debug.apk
